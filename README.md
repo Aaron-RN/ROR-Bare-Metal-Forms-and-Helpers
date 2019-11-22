@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby on Rails - Bare Metal Forms and Helpers
+## Forms and Authentication
 
-Things you may want to cover:
+This is a tutorial completed as part of 'The Odin Project' Ruby on Rails curriculum.
 
-* Ruby version
+This project will teach you the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters.
 
-* System dependencies
+### Requirements
 
-* Configuration
+* Ruby 2.6.3
 
-* Database creation
+### Installation
 
-* Database initialization
+* Download repository to your local machine, then run `bundle install`.
 
-* How to run the test suite
+### Useful Links
 
-* Services (job queues, cache servers, search engines, etc.)
+* [The Odin Project: Project Description Link](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms)
 
-* Deployment instructions
+## Authors: 
+### Aaron R. Newbold
+Aaron's Github Profile: https://github.com/Aaron-RN
+### Thaís Vieira Azevedo
+Thaís's Github Profile: https://github.com/thsvr
 
-* ...
+
+## Github Link
+Github Link: https://github.com/Aaron-RN/Bare-Metal-Forms-and-Helpers
