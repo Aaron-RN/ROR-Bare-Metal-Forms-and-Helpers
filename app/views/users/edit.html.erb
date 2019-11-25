@@ -1,15 +1,24 @@
 
 <%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-      <ul>
-        <% @user.errors.each do |error, msg| %>
-          <li><%= "#{error} - #{msg}" %></li>
-        <% end %>
-      </ul>
-    <% end %>
-  
-    Username: <%= f.text_field :username %><br />
-    Email: <%= f.email_field :email , :placeholder => "example@example.com"%><br />
-    Password: <%= f.password_field :password %><br />
-    <%= f.submit %>
-   <% end %>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.each do |error, msg| %>
+        <li><%= "#{error} - #{msg}" %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p>
+  <%= f.label :username %><br/>
+  <%= f.text_field :username %>
+  </p>
+  <p>
+  <%= f.label :email %><br/>
+  <%= f.email_field :email, :placeholder => "example@example.com" %>
+  </p>
+  <p>
+  <%= f.label :password %><br/>
+  <%= f.password_field :password %>
+  </p>
+  <%= f.submit %>
+<% end %>
