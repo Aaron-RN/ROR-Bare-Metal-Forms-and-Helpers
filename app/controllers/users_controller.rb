@@ -15,12 +15,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    # @user = User.new(username: params[:username], email: params[:email],
-    #                  password: params[:password])
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to users_path
+      redirect_to new_users_path
     else
       render :new
     end
@@ -30,9 +28,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(user_params)
-      redirect_to users_path
+      redirect_to edit_users_path
     else
-      render :new
+      render :edit
     end
   end
 
