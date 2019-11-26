@@ -25,14 +25,14 @@
 
 <% if false %>
 <%= form_tag('/users', enforce_utf8: true) do %>
-  <%= label_tag 'user_name', 'Username:' %>
-  <%= text_field_tag 'user_name'%>
+  <%= label_tag 'username', 'Username:' %>
+  <%= text_field_tag 'username'%>
   
-  <%= label_tag 'user_email', 'Email:'%>
-  <%= email_field_tag 'user_email'%>  <br>
+  <%= label_tag 'email', 'Email:'%>
+  <%= email_field_tag 'email'%>  <br>
 
-  <%= label_tag 'user_password', 'Password:'%>
-  <%= password_field_tag 'user_password'%>
+  <%= label_tag 'password', 'Password:'%>
+  <%= password_field_tag 'password'%>
 
   <%= submit_tag "Save new user"%>
 
