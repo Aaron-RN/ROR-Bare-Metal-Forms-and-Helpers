@@ -1,0 +1,57 @@
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.each do |error, msg| %>
+        <li><%= "#{error} - #{msg}" %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p>
+  <%= f.label :username %><br/>
+  <%= f.text_field :username %>
+  </p>
+  <p>
+  <%= f.label :email %><br/>
+  <%= f.email_field :email, :placeholder => "example@example.com" %>
+  </p>
+  <p>
+  <%= f.label :password %><br/>
+  <%= f.password_field :password %>
+  </p>
+  <%= f.submit %>
+ <% end %>
+
+<% if false %>
+<%= form_tag('/users', enforce_utf8: true) do %>
+  <%= label_tag 'username', 'Username:' %>
+  <%= text_field_tag 'username'%>
+  
+  <%= label_tag 'email', 'Email:'%>
+  <%= email_field_tag 'email'%>  <br>
+
+  <%= label_tag 'password', 'Password:'%>
+  <%= password_field_tag 'password'%>
+
+  <%= submit_tag "Save new user"%>
+
+ <% end %>
+
+<form action="/users" accept-charset="UTF-8" method="post">
+
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<label for="user_name">Username: </label>
+<input id="user_name" class="form-control" type="text" name="user[username]"><br>
+
+<label for="user_email">Email: </label>
+<input id="user_email" class="form-control" type="email" name="user[email]"><br>
+
+<label for="user_password">Password: </label>
+<input id="user_password" class="form-control" type="password" name="user[password]"><br>
+
+<input type="submit" name="commit" value="Submit">
+
+</form>
+ <% end %>
